@@ -102,10 +102,10 @@ namespace OfficeOpenXml.DataValidation
 
                     var type = ExcelDataValidationType.GetBySchemaName(typeSchema);
                     AddValidation(ExcelDataValidationFactory.Create(type, worksheet, addr, node));
-
-                    InternalValidationEnabled = true;
                 }
             }
+
+            InternalValidationEnabled = true;
         }
 
         private void AddValidation(IExcelDataValidation validation)
